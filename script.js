@@ -6,5 +6,10 @@ card.addEventListener('click', () => {
 
     if (hint) {
         hint.style.opacity = '0';
+
+        // remove completely after fade animation
+        setTimeout(() => {
+            hint.style.display = 'none';
+        }, 400);
     }
 });
