@@ -25,28 +25,37 @@ body {
     width: min(90vw, 600px);
     aspect-ratio: 2 / 3;
 
+    cursor: pointer;
+
+    transition: transform 1.2s ease, filter 0.4s ease;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
     transform-style: preserve-3d;
     transition: transform 1.2s ease;
-
-    cursor: pointer;
 }
 
-.card:hover {
-    filter: drop-shadow(0 0 12px rgba(212,175,55,.6))
-            drop-shadow(0 0 30px rgba(212,175,55,.4));
-}
-
-.card.flipped {
+.card.flipped .card-inner {
     transform: rotateY(180deg);
+}
+
+/* BLUE GLOW (your color) */
+.card:hover {
+    filter: drop-shadow(0 0 10px rgba(31,120,180,.5))
+            drop-shadow(0 0 40px rgba(31,120,180,.25));
+    transform: translateY(-2px);
 }
 
 .card-face {
     position: absolute;
-
-    width: 100%;
-    height: 100%;
+    inset: 0;
 
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 
     border-radius: 12px;
 
@@ -60,6 +69,6 @@ body {
     object-fit: contain;
 }
 
-.card-front {
+.card-back {
     transform: rotateY(180deg);
 }
