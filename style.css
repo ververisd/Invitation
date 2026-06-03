@@ -47,8 +47,8 @@ body {
 
 /* BLUE GLOW */
 .card:hover {
-    filter: drop-shadow(0 0 10px rgba(31,120,180,.5))
-            drop-shadow(0 0 40px rgba(31,120,180,.25));
+    filter: drop-shadow(0 0 10px rgba(0,140,255,.5))
+            drop-shadow(0 0 40px rgba(0,140,255,.25));
     transform: translateY(-2px);
 }
 
