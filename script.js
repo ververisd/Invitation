@@ -1,5 +1,7 @@
-const card = document.getElementById('card');
+window.addEventListener("load", () => {
+    const card = document.getElementById("card");
 
-card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
+    setTimeout(() => {
+        card.classList.add("flipped");
+    }, 500);
 });
