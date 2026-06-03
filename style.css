@@ -79,3 +79,35 @@ body {
 .card-back {
     transform: rotateY(0deg);
 }
+
+.hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    color: rgba(255,255,255,0.7);
+
+    background: rgba(0,0,0,0.4);
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(6px);
+
+    pointer-events: none;
+
+    animation: fadePulse 2s infinite;
+}
+
+@keyframes fadePulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
